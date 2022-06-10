@@ -1,8 +1,8 @@
 # Install followme with Homebrew
 
 ```shell
-brew tap mchmarny/td
-brew install td
+brew tap mchmarny/tadd
+brew install tadd
 ```
 
 New release will be automatically picked up with `brew upgrade`
