@@ -5,21 +5,21 @@
 class Tadd < Formula
   desc "Single binary, no dependency, utility to quickly create Todoist task."
   homepage "https://github.com/mchmarny/tadd"
-  version "0.4.3"
+  version "0.4.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/tadd/releases/download/v0.4.3/tadd_darwin_amd64"
-      sha256 "1a79b61a786fd9d767c3f2cb70475b26a157ffdcbdb421703b450d625b2ee263"
+      url "https://github.com/mchmarny/tadd/releases/download/v0.4.4/tadd_darwin_amd64"
+      sha256 "5bce920bf6da94765b6ac795f3daf8cb93e7ed5d04bfbdcfda9ddb8add352e8f"
 
       def install
         bin.install "tadd_darwin_amd64" => "tadd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mchmarny/tadd/releases/download/v0.4.3/tadd_darwin_arm64"
-      sha256 "460cfd1959af42503c3fe189898a3e3e75aa83b2dc962045f29abb0ecbecefd9"
+      url "https://github.com/mchmarny/tadd/releases/download/v0.4.4/tadd_darwin_arm64"
+      sha256 "ee173f4f3ef8585eec82e9973eb1ff6db805f808164e1e70b1bea1a46ab5f843"
 
       def install
         bin.install "tadd_darwin_arm64" => "tadd"
@@ -28,20 +28,20 @@ class Tadd < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/tadd/releases/download/v0.4.3/tadd_linux_arm64"
-      sha256 "ba16f5881770dd47dfa993ab629c76beb3bd97bc3801b8f8684a639d3e044751"
-
-      def install
-        bin.install "tadd_linux_arm64" => "tadd"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/tadd/releases/download/v0.4.3/tadd_linux_amd64"
-      sha256 "478b63be5e408215585664d251193d2951561d170174a7a142987df0f7866a2c"
+      url "https://github.com/mchmarny/tadd/releases/download/v0.4.4/tadd_linux_amd64"
+      sha256 "c732f020f864bfdee57bd5e34aed8708bf33d69e8dfa99c955a24b06418790bb"
 
       def install
         bin.install "tadd_linux_amd64" => "tadd"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mchmarny/tadd/releases/download/v0.4.4/tadd_linux_arm64"
+      sha256 "e2bf75e81614a4109e36c2b155c86d3333d44234af8c58fce4961695da793436"
+
+      def install
+        bin.install "tadd_linux_arm64" => "tadd"
       end
     end
   end
