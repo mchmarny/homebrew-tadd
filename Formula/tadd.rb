@@ -5,21 +5,21 @@
 class Tadd < Formula
   desc "Single binary, no dependency, utility to quickly create Todoist task."
   homepage "https://github.com/mchmarny/tadd"
-  version "0.4.2"
+  version "0.4.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/tadd/releases/download/v0.4.2/tadd_darwin_amd64"
-      sha256 "ca49695621fe6561b12d45bb757f7e42e6414478f7a7e71319796f49e6f1ad61"
+      url "https://github.com/mchmarny/tadd/releases/download/v0.4.3/tadd_darwin_amd64"
+      sha256 "1a79b61a786fd9d767c3f2cb70475b26a157ffdcbdb421703b450d625b2ee263"
 
       def install
         bin.install "tadd_darwin_amd64" => "tadd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mchmarny/tadd/releases/download/v0.4.2/tadd_darwin_arm64"
-      sha256 "9798d731f53dc1f7312bd82f4a47b324ca45f199267173351eb296ac56c2698c"
+      url "https://github.com/mchmarny/tadd/releases/download/v0.4.3/tadd_darwin_arm64"
+      sha256 "460cfd1959af42503c3fe189898a3e3e75aa83b2dc962045f29abb0ecbecefd9"
 
       def install
         bin.install "tadd_darwin_arm64" => "tadd"
@@ -29,16 +29,16 @@ class Tadd < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/tadd/releases/download/v0.4.2/tadd_linux_arm64"
-      sha256 "90e76816ff68930936cdbef9bfeeea08ceb94ae38232a4f3b5c2c233b50e437d"
+      url "https://github.com/mchmarny/tadd/releases/download/v0.4.3/tadd_linux_arm64"
+      sha256 "ba16f5881770dd47dfa993ab629c76beb3bd97bc3801b8f8684a639d3e044751"
 
       def install
         bin.install "tadd_linux_arm64" => "tadd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/tadd/releases/download/v0.4.2/tadd_linux_amd64"
-      sha256 "59ea7d9337653785c12c34b9ef86b5a45b669815613990ae0a093db8c074552b"
+      url "https://github.com/mchmarny/tadd/releases/download/v0.4.3/tadd_linux_amd64"
+      sha256 "478b63be5e408215585664d251193d2951561d170174a7a142987df0f7866a2c"
 
       def install
         bin.install "tadd_linux_amd64" => "tadd"
